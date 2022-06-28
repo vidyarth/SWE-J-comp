@@ -19,5 +19,5 @@
 ## Final document with SRS, Test Cases and Implementation
 [Final_report.pdf](https://github.com/vidyarth/SWE-J-comp/files/9003293/20BCE0150_VL2021220502653_PE003.1.pdf)
 
-##UI prototype Link
+## UI prototype Link
 https://www.figma.com/file/qIyQKcxu02Og9LDcGU31N1/SWE-PROJECT?node-id=0%3A1
