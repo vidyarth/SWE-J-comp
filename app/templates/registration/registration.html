@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'styles.css' %}" rel="stylesheet">
+    <title>Tuition View</title>
+    <style>
+        input {
+            font-size: 15px;
+            width: 20%;
+            height: 20%;
+            margin-bottom: 25px;
+            padding: 1%;
+        }
+        select{
+            font-size: large;
+            width: 25%;
+            height: 25%;
+            margin-bottom: 30px;
+            padding: 1%;
+        }
+        label{
+            font-size: 20px;
+            color: #08bd7f;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top-bar">
+        <a class="login hehe navside"> Login </a>
+    </div>
+    <div class="wrapper">
+        <div class="sidebar">
+            <ul>
+                <li class="navside">
+                    <a href="#" class="hehe"><i class="fas fa-graduation-cap"></i>My Tuitions</a>
+                </li>
+                <li class="navside">
+                    <a href="#"><i class="fas fa-search"></i>Search</a>
+                </li>
+                <li class="navside">
+                    <a href="#"><i class="fas fa-calendar"></i>Schedule</a>
+                </li>
+                <li class="navside">
+                    <a href="#"><i class="fas fa-location-dot"></i>Location</a>
+                </li>
+                <li class="navside">
+                    <a href="#"><i class="fas fa-question"></i>Quiz</a>
+                </li>
+            </ul>
+        </div>
+        <div class="main_content">
+            <div class="header">
+                <div class="header-card">
+                    <div class="h-img">
+                        <img src="{% static 'image 1.png' %}" alt="" />
+                    </div>
+                    <div class="header-text">Register</div>
+                </div>
+            </div>
+            <div class="header2-card">
+                <!-- <div class="header2-text">Tuition centers for you</div>
+                <div class="h-button hehe navside">Explore All</div> -->
+            </div>
+            <form action="" method="post"
+                style="font-size: 1.5rem; color: aliceblue; margin-left: 20%;padding-bottom: 20%;">
+                {% csrf_token %}
+                {{form.as_p}}
+                <input type="submit" value="Register" class="fas">
+            </form>
+            <div class="card-group">
+
+            </div>
+</body>
+
+</html>

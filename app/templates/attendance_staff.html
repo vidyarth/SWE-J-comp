@@ -1,0 +1,121 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XD</title>
+    <link href="{% static 'styles.css' %}" rel="stylesheet">
+    <style>
+        a {
+            color: aliceblue
+        }
+    
+        a:hover {
+            color: #08bd7f;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top-bar">
+        {% if user.is_authenticated %}
+        <a class="login hehe navside" href=""> {{user.name}} </a>
+        <a class="login hehe navside" href="{% url 'logout' %}"> Logout </a>
+        {% else %}
+        <a class="login hehe navside" href="{% url 'login' %}"> Login </a>
+        <a class="login hehe navside" href="{% url 'reg' %}"> Register </a>
+        {% endif %}
+    </div>
+    <div class="wrapper">
+        <div class="sidebar">
+            <ul>
+                <li class="navside">
+                    <a href="{% url 'tuitions' %}" class="hehe"><i class="fas fa-graduation-cap"></i>My Tuitions</a>
+                </li>
+                <li class="navside">
+                    <a href="#"><i class="fas fa-search"></i>Search</a>
+                </li>
+                <li class="navside">
+                    <a href="#"><i class="fas fa-calendar"></i>Schedule</a>
+                </li>
+                <li class="navside">
+                    <a href="#"><i class="fas fa-location-dot"></i>Location</a>
+                </li>
+                <li class="navside">
+                    <a href="#"><i class="fas fa-question"></i>Quiz</a>
+                </li>
+            </ul>
+        </div>
+        <div class="main_content">
+            <div class="header4">
+                <div class="header-card">
+                    <div class="header-text">Attendance</div>
+                    <!-- <img src="./images/image 7.png" alt="" class="header-img"> -->
+                </div>
+            </div>
+
+
+
+            <div class="card-group2">
+
+                <div class="marks-card1" style="width: 21.5rem">
+                    <div class="topic1">Topic</div>
+                    <div class="card-body">
+                        {% for i in object %}
+                        <div class="h4-card">
+                            <div class="b1-text">{{i.student_id}}</div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="marks-card2" style="width: 21.5rem">
+                    <div class="topic2">Date</div>
+                    <div class="card-body">
+                        {% for i in object %}
+                        <div class="h4-card">
+                            <div class="m1-text">{{i.created_at.date}}</div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="marks-card3" style="width: 21.5rem">
+                    <div class="topic3">Status</div>
+                    <div class="card-body">
+                        {% for i in object %}
+                        <div class="h4-card">
+                            <div class="b11-text"><a href="{% url 'update-attendace' pk=i.id %}">update
+                            </a></div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="h4-card">
+                <div class="b11-text">
+                    <a href="{% url 'create_attendance_report' %}">Add Report</a>
+                </div>
+            </div>
+</body>
+
+</html>
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% for i in data %}
+        <h1>{{i.student_id}}</h1>
+        <h1>{{i.status}}</h1>
+        <h1>{{i.created_at.date}}</h1>
+    {% endfor %}
+</body>
+</html> -->

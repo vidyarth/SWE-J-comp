@@ -1,0 +1,181 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XD</title>
+    <script src="https://kit.fontawesome.com/d09e218dd5.js" crossorigin="anonymous"></script>
+    <link href="{% static 'styles.css' %}" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <div class="top-bar">
+        <a class="login hehe navside"> Login </a>
+    </div>
+    <div class="wrapper">
+        <div class="sidebar">
+            <ul>
+                <li class="navside">
+                    <a href="{% url 'tuitions' %}" class=""><i class="fas fa-graduation-cap"></i>My Tuitions</a>
+                </li>
+                <li class="navside">
+                    <a href="#" class="hehe"><i class="fas fa-search"></i>Search</a>
+                </li>
+                <li class="navside">
+                    <a href="#"><i class="fas fa-calendar"></i>Schedule</a>
+                </li>
+                <li class="navside">
+                    <a href="#"><i class="fas fa-location-dot"></i>Location</a>
+                </li>
+                <li class="navside">
+                    <a href="#"><i class="fas fa-question"></i>Quiz</a>
+                </li>
+            </ul>
+        </div>
+        <div class="main_content">
+            <div class="header">
+                <div class="header-card">
+                    <div class="h-img">
+                        <img src="{% static 'image 1.png' %}" alt="" />
+                    </div>
+                    <div class="header-text">Tuitions</div>
+                </div>
+            </div>
+            <div class="header2-card">
+                <div class="header2-text">Tuition centers for you</div>
+                <div class="h-button navside"><a href="#" class="hehe">Explore All</a></div>
+            </div>
+
+
+
+            <div class="card-group">
+                <div class="card" style="width: 21.5rem">
+                    <img class="card-img-top" src="{% static 'Group 8.png' %}" alt="Card image cap" />
+                    <div class="card-body">
+                        <div class="h-card">
+                            <div class="c2-text">
+                                <i class="fa-solid fa-location-dot"></i>VELLORE
+                            </div>
+                            <div class="c-text">Maths and Physics</div>
+                        </div>
+                        <p class="card-text">
+                            Class X , Class XI and <br> Class XII
+                        </p>
+                        <div class="h-card">
+
+                            <div class="c1-text">ABC tuition</div>
+                            <a href="#" class="explore hehe ">Explore </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" style="width: 21.5rem">
+                    <img class="card-img-top" src="{% static 'Group 9.png' %}" alt="Card image cap" />
+                    <div class="card-body">
+                        <div class="h-card">
+                            <div class="c2-text">
+                                <i class="fa-solid fa-location-dot"></i>CHENNAI
+                            </div>
+                            <div class="c-text">Physics</div>
+                        </div>
+                        <p class="card-text">
+                            Class X , Class XI and <br> Class XII
+                        </p>
+                        <div class="h-card">
+
+                            <div class="c1-text">XYZ tuition</div>
+                            <a href="#" class="explore hehe ">Explore </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" style="width: 21.5rem">
+                    <img class="card-img-top" src="{% static 'Group 8.png' %}" alt="Card image cap" />
+                    <div class="card-body">
+                        <div class="h-card">
+                            <div class="c2-text">
+                                <i class="fa-solid fa-location-dot"></i>ERODE
+                            </div>
+                            <div class="c-text">Chemistry and Maths</div>
+                        </div>
+                        <p class="card-text">
+                            Class X , Class XI and <br> Class XII
+                        </p>
+                        <div class="h-card">
+
+                            <div class="c1-text">MNO tuition</div>
+                            <a href="#" class="explore hehe ">Explore </a>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+            <br>
+            <br>
+
+            <div class="card-group">
+                <div class="card" style="width: 21.5rem">
+                    <img class="card-img-top" src="{% static 'Group 8.png' %}" alt="Card image cap" />
+                    <div class="card-body">
+                        <div class="h-card">
+                            <div class="c2-text">
+                                <i class="fa-solid fa-location-dot"></i>VELLORE
+                            </div>
+                            <div class="c-text">Maths and Physics</div>
+                        </div>
+                        <p class="card-text">
+                            Class X , Class XI and <br> Class XII
+                        </p>
+                        <div class="h-card">
+            
+                            <div class="c1-text">Alpha tuition</div>
+                            <a href="#" class="explore hehe ">Explore </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" style="width: 21.5rem">
+                    <img class="card-img-top" src="{% static 'Group 9.png' %}" alt="Card image cap" />
+                    <div class="card-body">
+                        <div class="h-card">
+                            <div class="c2-text">
+                                <i class="fa-solid fa-location-dot"></i>CHENNAI
+                            </div>
+                            <div class="c-text">Physics</div>
+                        </div>
+                        <p class="card-text">
+                            Class X , Class XI and <br> Class XII
+                        </p>
+                        <div class="h-card">
+            
+                            <div class="c1-text">beta tuition</div>
+                            <a href="#" class="explore hehe ">Explore </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" style="width: 21.5rem">
+                    <img class="card-img-top" src="{% static 'Group 8.png' %}" alt="Card image cap" />
+                    <div class="card-body">
+                        <div class="h-card">
+                            <div class="c2-text">
+                                <i class="fa-solid fa-location-dot"></i>ERODE
+                            </div>
+                            <div class="c-text">Chemistry and Maths</div>
+                        </div>
+                        <p class="card-text">
+                            Class X , Class XI and <br> Class XII
+                        </p>
+                        <div class="h-card">
+            
+                            <div class="c1-text">gama tuition</div>
+                            <a href="#" class="explore hehe ">Explore </a>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+</body>
+
+</html>

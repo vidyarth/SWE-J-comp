@@ -1,0 +1,119 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'styles.css' %}" rel="stylesheet">
+</head>
+
+<body>
+    <div class="top-bar">
+        {% if user.is_authenticated %}
+        <a class="login hehe navside" href=""> {{user.name}} </a>
+        <a class="login hehe navside" href="{% url 'logout' %}"> Logout </a>
+        {% else %}
+        <a class="login hehe navside" href="{% url 'login' %}"> Login </a>
+        <a class="login hehe navside" href="{% url 'reg' %}"> Register </a>
+        {% endif %}
+    </div>
+    <div class="wrapper">
+        <div class="sidebar">
+            <ul>
+                <li class="navside">
+                    <a href="{% url 'tuitions' %}"  class="hehe"><i class="fas fa-graduation-cap"></i>My Tuitions</a>
+                </li>
+                <li class="navside">
+                    <a href="#"><i class="fas fa-search"></i>Search</a>
+                </li>
+                <li class="navside">
+                    <a href="#"><i class="fas fa-calendar"></i>Schedule</a>
+                </li>
+                <li class="navside">
+                    <a href="#"><i class="fas fa-location-dot"></i>Location</a>
+                </li>
+                <li class="navside">
+                    <a href="#"><i class="fas fa-question"></i>Quiz</a>
+                </li>
+            </ul>
+        </div>
+        <div class="main_content">
+            <div class="header">
+                <div class="header-card">
+                    <div class="h-img">
+                        <img src="{% static 'image 1.png' %}" alt="" />
+                    </div>
+                    {% if user.user_type != '4' %}
+                    <div class="header-text">{{ss.0.name}}</div>
+                    {% else %}
+                    <div class="header-text">Welcome</div>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="header2-card">
+                <div class="header2-text">Tuition centers for you</div>
+                <div class="h-button hehe navside">Explore All</div>
+            </div>
+
+
+            <div class="card-group">
+                <div class="card" style="width: 21.5rem">
+                    <img class="card-img-top" src="{% static 'Group 8.png' %}" alt="Card image cap" />
+                    <div class="card-body">
+                        <div class="h-card">
+                            <div class="c2-text">
+                                <i class="fa-solid fa-location-dot">INFO</i>
+                            </div>
+                            <div class="c-text">{{t}}</div>
+                        </div>
+                        <p class="card-text">
+                    
+                        </p>
+                        <div class="h-card">
+                            <div class="c1-text">Attendance</div>
+                            <a class="explore hehe" href="{% url 'view_attendance' tuition=tuition %}">Check</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" style="width: 21.5rem">
+                    <img class="card-img-top" src="{% static 'Group 8.png' %}" alt="Card image cap" />
+                    <div class="card-body">
+                        <div class="h-card">
+                            <div class="c2-text">
+                                <i class="fa-solid fa-location-dot">INFO</i>
+                            </div>
+                            <div class="c-text">{{t}}</div>
+                        </div>
+                        <p class="card-text">
+                        </p>
+                        <div class="h-card">
+                            <div class="c1-text">Marks</div>
+                            <a class="explore hehe" href="{% url 'view_marks' tuition=tuition %}">Check</a>
+                        </div>
+                    </div>
+                </div>
+                {% if user.user_type != '4' %}
+                <div class="card" style="width: 21.5rem">
+                    <img class="card-img-top" src="{% static 'Group 8.png' %}" alt="Card image cap" />
+                    <div class="card-body">
+                        <div class="h-card">
+                            <div class="c2-text">
+                                <i class="fa-solid fa-location-dot">INFO</i>
+                            </div>
+                            <div class="c-text">{{t}}</div>
+                        </div>
+                        <p class="card-text">
+                        </p>
+                        <div class="h-card">
+                            <div class="c1-text">Materials</div>
+                            <a class="explore hehe" href="{% url 'materials' staff=staff %}">Check</a>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+</body>
+
+</html>
